@@ -11,17 +11,25 @@ source:
 
 build:
   number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install --no-deps . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
   host:
     - pip
-    - python {{ python_min }}
+    - python
     - hatchling >=1.8.0
     - hatch-vcs
+    - hatch-mypyc
+    - mypy
+    - mypy_extensions
+    - attrs
+    - msgspec
   run:
-    - python >={{ python_min }}
+    - python
     - typing_extensions  # not actually required at runtime
     - wrapt  # provides 'proxy' extra
 
@@ -32,7 +40,7 @@ test:
     - psygnal.utils
   requires:
     - pip
-    - python {{ python_min }}
+    - python
   commands:
     - pip check
 
