@@ -43,6 +43,7 @@ test:
     - python
   commands:
     - pip check
+    - python -c "import psygnal; print(psygnal._compiled); assert psygnal._compiled"
 
 about:
   home: https://github.com/tlambert03/psygnal
