@@ -29,11 +29,13 @@ requirements:
     - mypy
     - mypy_extensions
     - pydantic-core !=2.10.0
+    - typing_extensions
     - attrs
     - msgspec
   run:
     - python
     - pydantic-core
+    - typing_extensions
     - wrapt  # provides 'proxy' extra
 
 test:
