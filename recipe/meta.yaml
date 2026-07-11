@@ -36,7 +36,7 @@ requirements:
   run:
     - python
     #- pydantic >2.10.0
-    - wrapt  # provides 'proxy' extra
+    # - wrapt  # provides 'proxy' extra
 
 test:
   imports:
