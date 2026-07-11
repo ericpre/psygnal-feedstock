@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script_env:
+    - HATCH_BUILD_HOOKS_ENABLE=1
 
 requirements:
   build:
@@ -26,6 +28,7 @@ requirements:
     - hatch-mypyc
     - mypy
     - mypy_extensions
+    - pydantic !=2.10.0
     - attrs
     - msgspec
   run:
