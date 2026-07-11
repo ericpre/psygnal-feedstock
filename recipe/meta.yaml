@@ -28,12 +28,12 @@ requirements:
     - hatch-mypyc
     - mypy
     - mypy_extensions
-    - pydantic !=2.10.0
+    - pydantic-core !=2.10.0
     - attrs
     - msgspec
   run:
     - python
-    - typing_extensions  # not actually required at runtime
+    - pydantic-core
     - wrapt  # provides 'proxy' extra
 
 test:
