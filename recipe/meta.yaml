@@ -35,7 +35,7 @@ requirements:
     - msgspec
   run:
     - python
-    - pydantic >2.10.0
+    #- pydantic >2.10.0
     - wrapt  # provides 'proxy' extra
 
 test:
