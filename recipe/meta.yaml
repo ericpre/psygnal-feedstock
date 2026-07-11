@@ -32,7 +32,8 @@ requirements:
     - mypy_extensions >=0.4.2
     - pydantic >2.10.0
     - attrs
-    - msgspec
+    #- msgspec
+    - wrapt
   run:
     - python
     #- pydantic >2.10.0
