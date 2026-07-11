@@ -28,6 +28,7 @@ requirements:
     - hatch-vcs
     - hatch-mypyc >=0.13.0
     - mypy >=2.1.0
+    - mypyc >=2.1.0
     - mypy_extensions >=0.4.2
     - pydantic >2.10.0
     - attrs
